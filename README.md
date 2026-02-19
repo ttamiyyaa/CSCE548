@@ -38,3 +38,26 @@ Run the SQL script to create and seed the database:
 ```bash
 /usr/local/mysql/bin/mysql -u root -p < schema_and_seed_mysql.sql
 
+## Project 2 – Business and Service Layers
+
+Project 2 extends the Homework Tracker by adding:
+
+- A **Business Layer** (`business.py`) that enforces validation rules.
+- A **Service Layer** (`service.py`) implemented using FastAPI.
+- A **Console Client** (`client.py`) that calls the service endpoints.
+
+### How to Run Project 2
+
+1. Activate the virtual environment: source venv/bin/activate
+
+2. Start the service: uvicorn service:app --reload --port 8000
+
+3. In a second terminal, run the client: python client.py
+
+The client demonstrates:
+- Retrieving courses
+- Retrieving assignments
+- Submitting assignments
+- Business rule validation
+
+
